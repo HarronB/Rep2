@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'coaches/index'
+  get 'coaches/show'
+  get 'players/index'
+  get 'players/show'
   get 'teams/index'
   get 'teams/show'
   # restful routes, only need index and show
