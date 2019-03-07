@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # restful routes, only need index and show
+  resources :teams, only: %i[index show]
+  resources :players, only: %i[index show]
+  resources :coaches, only: %i[index show]
 end
