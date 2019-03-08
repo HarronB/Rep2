@@ -1,2 +1,18 @@
 <h1>Players#show</h1>
 <p>Find me in app/views/players/show.html.erb</p>
+
+
+
+
+
+<h2> <%= @player.name%> </h2>
+
+
+<h4>  Player Stats : </h4>
+
+<h5> Position: <%= @player.position%>      </h5>
+
+<h5> Wins :  <%=@player.team.win%>     </h5>
+
+<h5> Losses:   <%=@player.team.loss%>   </h5>
+

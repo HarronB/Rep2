@@ -14,13 +14,12 @@
 <%end%>
 
 
-
 <h2> <%= @team.name %>'s Players </h2>
+<h4> Player Count: <%=@team.players.count%>  </h4>
 <% @team.players.each do |player|%>
   <ul>
     <li> <%= link_to player.name, player%>  and thier position is <%= player.position%>     </li>
   </ul>
-
 <%end%>
 
 

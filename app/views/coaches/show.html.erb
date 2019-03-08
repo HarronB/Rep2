@@ -1,2 +1,16 @@
 <h1>Coaches#show</h1>
 <p>Find me in app/views/coaches/show.html.erb</p>
+
+
+
+<h2> <%= @coach.name%>    </h2>
+
+
+<h4> Team Coached </h4>
+<p>   <%= @coach.team.name%>   </p>
+
+<h4>  Team Win/Loss  </h4>
+
+<p> Wins:    <%=@coach.team.win%>
+    Losses:    <%=@coach.team.loss%>
+</p>
