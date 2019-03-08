@@ -16,3 +16,6 @@
 
 <h5> Losses:   <%=@player.team.loss%>   </h5>
 
+
+<p> Total players on <%= @player.name%>'s team (<%=link_to @player.team.name, @player.team %>): <%= @player.team.players.count%>  </p>
+
