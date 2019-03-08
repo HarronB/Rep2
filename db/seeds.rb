@@ -8,9 +8,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Team.destroy_all
+
 Player.destroy_all
 Coach.destroy_all
+Team.destroy_all
 
 3.times do
   team = Team.create(name: Faker::Sports::Football.unique.team, win: Faker::Number.between(0, 10), loss: Faker::Number.between(0, 10))
@@ -28,6 +29,6 @@ Coach.destroy_all
 end
 
 # FOR VERIFICATION IN CONSOLE
-puts "Number of houses: #{Team.count}"
-puts "Number of students: #{Player.count}"
-puts "Number of teachers: #{Coach.count}"
+puts "Number of teams: #{Team.count}"
+puts "Number of players: #{Player.count}"
+puts "Number of coaches: #{Coach.count}"
