@@ -6,6 +6,6 @@
 
 <% @coaches.each do |coach|%>
   <ul>
-      <li> <%= link_to coach.name, coach%>  coaches team : <%=coach.team.name%>   </li>
+      <li> <%= link_to coach.name, coach%>  coaches team : <%= link_to coach.team.name, coach.team%>   </li>
   </ul>
 <%end%>

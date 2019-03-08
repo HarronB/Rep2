@@ -5,17 +5,13 @@
 
 
 
-<h2> <%= @player.name%> </h2>
+<h2> <%= @player.name%>    (<%=link_to @player.team.name, @player.team %>)  </h2>
 
-
+<br>
 <h4>  Player Stats : </h4>
-
 <h5> Position: <%= @player.position%>      </h5>
-
 <h5> Wins :  <%=@player.team.win%>     </h5>
-
 <h5> Losses:   <%=@player.team.loss%>   </h5>
-
 
 <p> Total players on <%= @player.name%>'s team (<%=link_to @player.team.name, @player.team %>): <%= @player.team.players.count%>  </p>
 

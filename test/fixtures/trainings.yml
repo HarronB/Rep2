@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  coach: one
+  next_training: 2019-03-08 02:59:45
+
+two:
+  player: two
+  coach: two
+  next_training: 2019-03-08 02:59:45
