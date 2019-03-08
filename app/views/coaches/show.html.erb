@@ -14,3 +14,13 @@
 <p> Wins:    <%=@coach.team.win%>
     Losses:    <%=@coach.team.loss%>
 </p>
+
+
+
+<h4> TRAINING TIMES </h4>
+
+<p>
+			<% @coach.trainings.each do |tra|%>
+ 			 <p> Date: <%= tra.next_training%>   -- Player: <%= link_to tra.player.name, tra.player%>   </p>
+			<%end%>
+</p>

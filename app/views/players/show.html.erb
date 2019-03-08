@@ -15,3 +15,10 @@
 
 <p> Total players on <%= @player.name%>'s team (<%=link_to @player.team.name, @player.team %>): <%= @player.team.players.count%>  </p>
 
+
+<h4> TRAINING TIMES </h4>
+<p>
+			<% @player.trainings.each do |tra|%>
+ 			 <p> <%= tra.next_training%>   with coach: <%= link_to tra.coach.name, tra.coach%>   </p>
+			<%end%>
+</p>

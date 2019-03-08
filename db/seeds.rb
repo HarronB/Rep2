@@ -28,9 +28,9 @@ Team.destroy_all
   end
 end
 
-5.times do
+25.times do
   player = Player.all.sample
-  training_coach = Coach.all.sample
+  training_coach = player.team.coaches.sample # only coaches and players from the same team
   next_training = Faker::Time.forward(2, :morning) # sometime in next 2 days, :morning     or    :evening
   Training.create(next_training: next_training, player: player, coach: training_coach)
 end
