@@ -16,7 +16,7 @@ Team.destroy_all
 3.times do
   team = Team.create(name: Faker::Sports::Football.unique.team, win: Faker::Number.between(0, 10), loss: Faker::Number.between(0, 10))
 
-  number_of_players = rand(5..10)
+  number_of_players = rand(8..10)
   number_of_coaches = rand(1..3)
 
   number_of_players.times do

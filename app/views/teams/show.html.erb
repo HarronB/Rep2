@@ -1,8 +1,7 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h1> Team Details </h1>
 
 
-<%= @team.name %>
+<h2><%= @team.name %> </h2>
 
 
 
@@ -16,12 +15,14 @@
 
 <h2> <%= @team.name %>'s Players </h2>
 <h4> Player Count: <%=@team.players.count%>  </h4>
+
+<p>
 <% @team.players.each do |player|%>
   <ul>
     <li> <%= link_to player.name, player%>  and thier position is <%= player.position%>     </li>
   </ul>
 <%end%>
-
+</p>
 
 
 
