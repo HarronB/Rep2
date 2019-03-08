@@ -8,7 +8,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Player.destroy_all
 Coach.destroy_all
 Team.destroy_all
@@ -20,7 +19,7 @@ Team.destroy_all
   number_of_coaches = rand(1..3)
 
   number_of_players.times do
-    team.players.create(name: Faker::Sports::Football.unique.player)
+    team.players.create(name: Faker::Sports::Football.unique.player, position: Faker::Sports::Football.position)
   end
 
   number_of_coaches.times do

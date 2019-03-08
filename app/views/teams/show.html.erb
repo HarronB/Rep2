@@ -1,2 +1,28 @@
 <h1>Teams#show</h1>
 <p>Find me in app/views/teams/show.html.erb</p>
+
+
+<%= @team.name %>
+
+
+
+<h2> <%= @team.name %>'s Coaches </h2>
+<% @team.coaches.each do |coach|%>
+  <ul>
+    <li> <%= link_to coach.name, coach%>      </li>
+  </ul>
+<%end%>
+
+
+
+<h2> <%= @team.name %>'s Players </h2>
+<% @team.players.each do |player|%>
+  <ul>
+    <li> <%= link_to player.name, player%>  and thier position is <%= player.position%>     </li>
+  </ul>
+
+<%end%>
+
+
+
+

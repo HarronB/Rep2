@@ -1,5 +1,5 @@
 class Coach < ApplicationRecord
   belongs_to :team
 
-  validates :name, prenence: true
+  validates :name, presence: true
 end

@@ -4,10 +4,7 @@
 
 <h2> List of Teams </h2>
 <ul>
-
   <% @teams.each do |team| %>
-
-    <li> <%= team.name%>
-
+    <li> <%= link_to team.name, team%> </li>
   <% end%>
 </ul>
