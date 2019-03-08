@@ -8,6 +8,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Training.destroy_all
 Player.destroy_all
 Coach.destroy_all
 Team.destroy_all
@@ -27,7 +28,15 @@ Team.destroy_all
   end
 end
 
+5.times do
+  player = Player.all.sample
+  training_coach = Coach.all.sample
+  next_training = Faker::Time.forward(2, :morning) # sometime in next 2 days, :morning     or    :evening
+  Training.create(next_training: next_training, player: player, coach: training_coach)
+end
+
 # FOR VERIFICATION IN CONSOLE
 puts "Number of teams: #{Team.count}"
 puts "Number of players: #{Player.count}"
 puts "Number of coaches: #{Coach.count}"
+puts "Number of Training days: #{Training.count}"
