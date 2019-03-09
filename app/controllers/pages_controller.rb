@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   before_action :set_page, only: %i[show edit update destroy]
 
   # THE REQUIRED ACTION FOR about_us STATIC PAGE
-  # this is shared with the view we had to create. in this the view i created was case static.html.erb(in pages views)
+  # this is shared with the view . in this the view i created was case static.html.erb(in pages views)
   def static
     @page = Page.find_by(permalink: params[:permalink])
 
